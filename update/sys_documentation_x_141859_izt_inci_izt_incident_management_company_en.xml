@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="company" label="Company" language="en" table="x_141859_izt_inci_izt_incident_management">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>company</element>
+            <help/>
+            <hint/>
+            <label>Company</label>
+            <language>en</language>
+            <name>x_141859_izt_inci_izt_incident_management</name>
+            <plural>Companies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-08-02 12:07:55</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>ab2e7bca4fd0430075cf0ab18110c728</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Company</sys_name>
+            <sys_package display_value="IZT  Incident Management System" source="x_141859_izt_inci">eab2ebc64f90430075cf0ab18110c721</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IZT  Incident Management System">eab2ebc64f90430075cf0ab18110c721</sys_scope>
+            <sys_update_name>sys_documentation_x_141859_izt_inci_izt_incident_management_company_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-08-02 12:07:55</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

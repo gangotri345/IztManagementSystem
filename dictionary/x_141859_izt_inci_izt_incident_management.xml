@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="IZT Incident Management" max_length="40" name="x_141859_izt_inci_izt_incident_management" type="collection">
+        <element dependent="assignment_group" dependent_on_field="assignment_group" label="Assignee" max_length="32" name="assigned_to" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element label="Assignment Group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference"/>
+        <element dependent="company" dependent_on_field="company" label="Caller" mandatory="true" max_length="32" name="caller" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="inquiry/help" label="Category" mandatory="true" max_length="40" name="category" type="string">
+            <choice>
+                <element label="Inquiry/Help" sequence="0" value="inquiry/help"/>
+                <element label="Database" sequence="1" value="database"/>
+                <element label="Software" sequence="2" value="software"/>
+                <element label="Hardware" sequence="3" value="hardware"/>
+                <element label="Network" sequence="4" value="network"/>
+            </choice>
+        </element>
+        <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="800" name="description" type="string"/>
+        <element choice="3" default="1" label="Impact" mandatory="true" max_length="40" name="impact" type="integer">
+            <choice>
+                <element label="1-High" sequence="0" value="1"/>
+                <element label="2-Medium" sequence="1" value="2"/>
+                <element label="3-Low" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" default="5" label="Priority" mandatory="true" max_length="40" name="priority" type="integer">
+            <choice>
+                <element label="1 - Critical" sequence="0" value="1"/>
+                <element label="2 - High" sequence="1" value="2"/>
+                <element label="3 - Moderate" sequence="2" value="3"/>
+                <element label="4 - Low" sequence="3" value="4"/>
+                <element label="5 - Planning" sequence="4" value="5"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="80" name="shortdescription" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="State" mandatory="true" max_length="40" name="state" type="string">
+            <choice>
+                <element label="New" sequence="0" value="new"/>
+                <element label="Assigned" sequence="1" value="assigned"/>
+                <element label="In Progress" sequence="2" value="inpogress"/>
+                <element label="Resolved" sequence="3" value="resolved"/>
+                <element label="Closed" sequence="4" value="closed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Subcategory" mandatory="true" max_length="40" name="subcategory" type="string">
+            <choice>
+                <element label="Antivirus" sequence="0" value="antivirus"/>
+                <element label="Email" sequence="1" value="email"/>
+                <element label="Internal Application" sequence="2" value="internalapplication"/>
+            </choice>
+        </element>
+        <element choice="3" default="1" label="Urgency" mandatory="true" max_length="40" name="urgency" type="integer">
+            <choice>
+                <element label="1-High" sequence="0" value="1"/>
+                <element label="2-Medium" sequence="1" value="2"/>
+                <element label="3-Low" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_5" type="string">
+            <choice>
+                <element label="Choice 1" sequence="0" value="Choice 1"/>
+                <element label="Choice 2" sequence="1" value="Choice 2"/>
+                <element label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="caller"/>
+        </index>
+        <index name="index2">
+            <element name="assignment_group"/>
+        </index>
+        <index name="index3">
+            <element name="company"/>
+        </index>
+        <index name="index4">
+            <element name="location"/>
+        </index>
+        <index name="index5">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>
